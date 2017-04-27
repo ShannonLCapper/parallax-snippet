@@ -67,3 +67,46 @@ body {
 #layer8 {
 	z-index: 0;
 }
+
+h1 {
+	font-size: 2rem;
+	text-align: center;
+}
+
+.mv-style-btns {
+	list-style: none;
+	text-align: center;
+	margin: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.mv-style-btns li {
+	padding: 0;
+	margin: 0;
+	margin: 15px;
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.mv-style-btn {
+	text-align: center;
+	height: 100%;
+	display: block;
+	cursor: pointer;
+	background-color: transparent;
+	border: #b9a488 solid 3px;
+	color: #b9a488;
+}
+
+.mv-style-btn:hover,
+.mv-style-btn:focus {
+	background-color: rgba(185, 164, 136, 0.2);
+}
+
+.mv-style-btn.active {
+	background-color: #b9a488;
+	color: #280f1c;
+}

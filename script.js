@@ -194,6 +194,11 @@ $( document ).ready( function() {
 
 	setParentHeightByChild.init( $persCont, $persCont.find("img") );
 	perspectiveContainer.init( $persCont );
+
+	$( ".mv-style-btn" ).click( function() {
+		$( ".mv-style-btn" ).removeClass("active");
+		$( this ).addClass("active");
+	})
 	
 	$( "#sameWithBtn" ).click( function() {
 		perspectiveContainer.adjustSettings( $persCont, {followMouse: true, movementType: "closeMost"});
