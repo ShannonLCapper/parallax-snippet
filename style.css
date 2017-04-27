@@ -1,0 +1,69 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	color: #b9a488;
+	background-color: #280f1c;
+	min-width: 300px;
+}
+
+.perspectiveContainer {
+	margin: 0 auto;
+	height: 500px; /*This will be overridden in JS*/
+	position: relative;
+	overflow: hidden;
+}
+
+.perspectiveContainer picture, .perspectiveContainer > img {
+	position: absolute;
+	width: 120%; /*This is redundant from the sizes="120vw" in the html*/
+
+	/*This centers the img within the container*/
+	left: 50%;
+	-ms-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%); 
+	
+}
+
+.perspectiveContainer picture > img {
+	width: 100%;
+}
+
+#layer1 {
+	z-index: 7;
+}
+
+#layer2 {
+	z-index: 6;
+}
+
+#layer3 {
+	z-index: 5;
+}
+
+#layer4 {
+	z-index: 4;
+}
+
+#layer5 {
+	z-index: 3;
+}
+
+#layer6 {
+	z-index: 2;
+}
+
+#layer7 {
+	z-index: 1;
+}
+
+#layer8 {
+	z-index: 0;
+}

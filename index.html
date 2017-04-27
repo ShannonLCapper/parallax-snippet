@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset='UTF-8' />
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="Shannon L Capper">
+    <title>Forest Perspective</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="perspectiveContainer">
+        <!--600w for <500px screens,
+            920w for <768px screens,
+            1190w for < 992px screens,
+            1440w for <1200px screens,
+            2100 for >1200px screens
+        -->
+        <picture class="layer" id="layer1">
+            <source media="(min-width: 700px)" sizes="120vw"
+            srcset="images/large/layer1w1190.png 1190w,
+                    images/large/layer1w1440.png 1440w,
+                    images/large/layer1w2100.png 2100w"
+            >
+            <img alt="trees" src="images/large/layer1w920.png" sizes="120vw"
+            srcset="images/small/layer1w600.png 600w, 
+                    images/small/layer1w920.png 920w,
+                    images/small/layer1w1190.png 1190w,
+                    images/small/layer1w1440.png 1440w"
+            >
+        </picture>
+
+        <picture class="layer" id="layer2">
+            <source media="(min-width: 700px)" sizes="120vw"
+            srcset="images/large/layer2w1190.png 1190w,
+                    images/large/layer2w1440.png 1440w,
+                    images/large/layer2w2100.png 2100w"
+            >
+            <img alt="trees"  
+            sizes="120vw"
+            src="images/large/layer2w920.png" 
+            srcset="images/small/layer2w600.png 600w,
+                    images/small/layer2w920.png 920w,
+                    images/small/layer2w1190.png 1190w,
+                    images/small/layer2w1440.png 1440w
+            ">
+        </picture>
+
+        <picture  class="layer" id="layer3">
+            <source media="(min-width: 700px)" sizes="120vw"
+            srcset="images/large/layer3w1190.png 1190w,
+                    images/large/layer3w1440.png 1440w,
+                    images/large/layer3w2100.png 2100w"
+            >
+            <img alt="deer standing among trees"
+            sizes="120vw"
+            src="images/large/layer3w920.png" 
+            srcset="images/small/layer3w600.png 600w,
+                    images/small/layer3w920.png 920w,
+                    images/small/layer3w1190.png 1190w,
+                    images/small/layer3w1440.png 1440w
+            ">
+        </picture>
+
+        <picture class="layer" id="layer4">
+            <source media="(min-width: 700px)" sizes="120vw"
+            srcset="images/large/layer4w1190.png 1190w,
+                    images/large/layer4w1440.png 1440w,
+                    images/large/layer4w2100.png 2100w"
+            >
+            <img alt="trees" 
+            sizes="120vw"
+            src="images/large/layer4w920.png" 
+            srcset="images/small/small/layer4w600.png 600w,
+                    images/small/layer4w920.png 920w,
+                    images/small/layer4w1190.png 1190w,
+                    images/small/layer4w1440.png 1440w
+            ">
+        </picture>
+
+        <picture class="layer" id="layer5">
+            <source media="(min-width: 700px)" sizes="120vw"
+            srcset="images/large/layer5w1190.png 1190w,
+                    images/large/layer5w1440.png 1440w,
+                    images/large/layer5w2100.png 2100w"
+            >
+            <img alt="trees"
+            sizes="120vw" 
+            src="images/large/layer5w920.png" 
+            srcset="images/small/layer5w600.png 600w,
+                    images/small/layer5w920.png 920w,
+                    images/small/layer5w1190.png 1190w,
+                    images/small/layer5w1440.png 1440w
+            ">
+        </picture>
+
+        <picture class="layer" id="layer6">
+            <source media="(min-width: 700px)" sizes="120vw"
+            srcset="images/large/layer6w1190.png 1190w,
+                    images/large/layer6w1440.png 1440w,
+                    images/large/layer6w2100.png 2100w"
+            >
+            <img alt="trees" 
+            sizes="120vw"
+            src="images/large/layer6w920.png" 
+            srcset="images/small/layer6w600.png 600w,
+                    images/small/layer6w920.png 920w,
+                    images/small/layer6w1190.png 1190w,
+                    images/small/layer6w1440.png 1440w
+            ">
+        </picture>
+
+        <picture id="layer7">
+            <source media="(min-width: 700px)" sizes="120vw"
+            srcset="images/large/layer7w1190.png 1190w,
+                    images/large/layer7w1440.png 1440w,
+                    images/large/layer7w2100.png 2100w"
+            >
+            <img alt="mist"
+            sizes="120vw"
+            src="images/large/layer7w920.png" 
+            srcset="images/small/layer7w600.png 600w,
+                    images/small/layer7w920.png 920w,
+                    images/small/layer7w1190.png 1190w,
+                    images/small/layer7w1440.png 1440w
+            ">
+        </picture>
+
+        <picture id="layer8">
+            <source media="(min-width: 700px)" sizes="120vw"
+            srcset="images/large/layer8w600.png">
+            <img alt="sky"
+            sizes="120vw"
+            src="images/large/layer8w600.png"
+            srcset="images/small/layer8w600.png">
+        </picture>
+
+    </div>
+
+    <p>
+        All same direction optimized, with mouse<button type="button" id="sameWithBtn">Click</button>
+    </p>
+    <p> 
+        All same direction optimized, against mouse<button type="button" id="sameAgainstBtn">Click</button>
+    </p>
+    <p>
+        Tilt, with mouse<button type="button" id="tiltWithBtn">Click</button>
+    </p>
+    <p>
+        Tilt, against mouse<button type="button" id="tiltAgainstBtn">Click</button>
+    </p>
+    <p>
+        All same direction, reversed<button type="button" id="sameReversedBtn">Click</button>
+    </p>
+</body>
+</html>
